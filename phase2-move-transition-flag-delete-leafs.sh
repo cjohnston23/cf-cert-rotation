@@ -6,7 +6,6 @@ if [[ -z ${1} ]]; then
   exit 1
 fi
 
-#export CFDEP=c-ho-g6-cf
 export CFDEP=${1}
 
 CALIST=$(credhub curl -p "/api/v1/certificates" -X GET | jq '.certificates[]
@@ -49,6 +48,5 @@ LEAFLISTCLEAN=$(echo ${LEAFLIST} | tr -d '"')
 for i in ${LEAFLISTCLEAN}
   do
     echo ${i}
-    #credhub get --name=${i}
     credhub delete --name=${i}
   done
