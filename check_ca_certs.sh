@@ -13,10 +13,6 @@ CALIST=$(credhub curl -p "/api/v1/certificates" -X GET | jq '.certificates[]
 .versions[0].certificate_authority == true) | .name')
 
 CALISTCLEAN=$(echo ${CALIST} | tr -d '"' | xargs -n1 | sort | xargs)
-#echo ${CALISTCLEAN}
-
-#CALISTCLEAN=$(echo ${CALIST} | sort)
-#echo ${CALISTCLEAyylkN}
 
 # Generate Transition CA Version for each CA
 for i in ${CALISTCLEAN}
