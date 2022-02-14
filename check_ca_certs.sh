@@ -20,5 +20,4 @@ for i in ${CALISTCLEAN}
     echo ${i}
     credhub curl -p "/api/v1/certificates?name=${i}" | jq -r '.certificates[] | .versions[]'
     echo
-    echo
   done
