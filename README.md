@@ -1,4 +1,4 @@
-# CFCE Certificate Rotation
+# CF Certificate Rotation
 
 ## Using credhub concatentate option that allows for multiple "active" versions at the same time
 
@@ -56,7 +56,7 @@
 * https://lists.cloudfoundry.org/g/cf-dev/message/7804
 * https://docs.vmware.com/en/Spring-Cloud-Gateway-for-VMware-Tanzu/1.1/spring-cloud-gateway/GUID-rotating-certificates.html
 
-## Usual Command Examples
+## Useful Command Examples
 
 #### Get list of all certificates
 
